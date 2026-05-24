@@ -19,11 +19,36 @@ To Implement Diffie Hellman Key Exchange Algorithm
 5. Security: The difficulty of computing discrete logarithms ensures that the shared key remains secure even if public values are intercepted.
 
 ## Program:
+```
+P = int(input("Enter Prime Number: "))
+G = int(input("Enter Primitive Root: "))
 
+a = int(input("Enter Private Key of ASWIN ANTONY: "))
+b = int(input("Enter Private Key of M: "))
 
+A = (G ** a) % P
+B = (G ** b) % P
+
+secretA = (B ** a) % P
+secretB = (A ** b) % P
+
+print("Public Key of ASWIN ANTONY:", A)
+print("Public Key of M:", B)
+
+print("Secret Key for ASWIN ANTONY:", secretA)
+print("Secret Key for M:", secretB)
+
+if secretA == secretB:
+    print("Secret key successfully established")
+else:
+    print("Keys do not match")
+
+print("Program executed successfully")
+```
 
 ## Output:
 
+<img width="1300" height="716" alt="image" src="https://github.com/user-attachments/assets/2fab4220-bd44-4af8-9ff8-5d25c7e50000" />
 
 
 ## Result:
